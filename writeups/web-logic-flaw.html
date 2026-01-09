@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Logic Flaws in Authentication Mechanisms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<main class="container">
+
+    <!-- HEADER -->
+    <header class="hero">
+        <h1>Web Logic Flaws in Authentication Mechanisms</h1>
+        <p class="role">Security Analysis Writeup</p>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="card">
+        <h2>Overview</h2>
+        <p>
+            Authentication mechanisms are responsible for verifying user identity
+            before granting access to protected resources. During hands-on practice
+            through Capture The Flag (CTF) challenges and web security labs, I
+            repeatedly encountered authentication systems that failed due to
+            incorrect logic rather than technical vulnerabilities.
+        </p>
+        <p>
+            This writeup discusses common logic flaws observed in authentication
+            workflows, how such flaws can be abused by attackers, and why they
+            represent a serious risk in real-world web applications.
+        </p>
+    </section>
+
+    <!-- VULNERABILITY DESCRIPTION -->
+    <section class="card">
+        <h2>Vulnerability Description</h2>
+        <p>
+            Authentication logic flaws occur when an application relies on
+            assumptions about user behavior or trusts client-controlled input
+            during the authentication process.
+        </p>
+        <p>
+            Based on practical experience, common patterns include:
+        </p>
+        <ul class="list">
+            <li>Trusting hidden fields or client-side flags to determine login state</li>
+            <li>Missing server-side validation between multi-step authentication flows</li>
+            <li>Allowing access when intermediate authentication steps are skipped</li>
+        </ul>
+        <p>
+            These issues often exist even when credentials validation itself
+            appears to be implemented correctly.
+        </p>
+    </section>
+
+    <!-- ATTACK LOGIC -->
+    <section class="card">
+        <h2>Attack Logic (High-Level)</h2>
+        <p>
+            In many cases, exploiting authentication logic flaws does not require
+            advanced exploits. Instead, the attack focuses on understanding how
+            the application processes authentication requests.
+        </p>
+        <p>
+            By manually replaying and modifying authentication requests, it is
+            possible to identify situations where the application incorrectly
+            trusts client-side values or fails to enforce the correct order of
+            authentication steps.
+        </p>
+        <ul class="list">
+            <li>Observe authentication request sequences during login</li>
+            <li>Replay or modify requests outside the intended workflow</li>
+            <li>Manipulate client-controlled parameters influencing authentication state</li>
+            <li>Access protected functionality without completing all required steps</li>
+        </ul>
+        <p>
+            These flaws often remain unnoticed during normal usage, as the
+            application behaves correctly when accessed through the intended
+            user interface.
+        </p>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="card">
+        <h2>Impact</h2>
+        <p>
+            Authentication logic flaws can have significant security implications
+            depending on the affected application.
+        </p>
+        <ul class="list">
+            <li>Unauthorized access to user accounts</li>
+            <li>Privilege escalation</li>
+            <li>Exposure of sensitive user data</li>
+            <li>Loss of trust in application security controls</li>
+        </ul>
+        <p>
+            In real-world scenarios, such vulnerabilities are commonly exploited
+            during account takeover attacks.
+        </p>
+    </section>
+
+    <!-- LESSONS LEARNED -->
+    <section class="card">
+        <h2>Lessons Learned</h2>
+        <ul class="list">
+            <li>Authentication logic must be enforced entirely on the server side</li>
+            <li>Client-side values should never determine authentication decisions</li>
+            <li>Each step in a multi-step authentication flow must be validated</li>
+            <li>Security testing should include abnormal request flows, not only valid usage</li>
+        </ul>
+    </section>
+
+    <!-- MITIGATION -->
+    <section class="card">
+        <h2>Mitigation</h2>
+        <p>
+            To reduce the risk of authentication logic flaws, developers and
+            security teams should:
+        </p>
+        <ul class="list">
+            <li>Implement strict server-side authentication and session validation</li>
+            <li>Avoid relying on client-controlled data for security decisions</li>
+            <li>Design clear and consistent authentication workflows</li>
+            <li>Perform regular security testing focused on business and logic flows</li>
+        </ul>
+    </section>
+
+    <!-- BACK LINK -->
+    <section class="card">
+        <a href="../index.html">← Back to Portfolio</a>
+    </section>
+
+</main>
+
+</body>
+</html>
