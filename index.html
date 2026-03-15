@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mohamed Yasin | Offensive Security</title>
+<meta name="description" content="Mohamed Yasin — Cybersecurity student specializing in offensive security, web application exploitation, and CTF competitions. Based in Tamil Nadu, India.">
+<meta name="keywords" content="cybersecurity, penetration testing, CTF player, web security, offensive security, bug bounty, Tamil Nadu">
+<meta name="author" content="Mohamed Yasin">
+<meta property="og:title" content="Mohamed Yasin | Offensive Security">
+<meta property="og:description" content="Cybersecurity student specializing in web exploitation, CTF competitions, and offensive security research.">
+<meta property="og:url" content="https://md-yasin786.github.io">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg aria-hidden="true" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -246,6 +254,22 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
   footer{flex-direction:column;gap:0.8rem;padding:1.5rem;text-align:center;}
   .divider{margin:0 1.5rem;}
 }
+/* Certifications */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
+.cert-card{background:var(--bg2);border:1px solid var(--border);padding:1.8rem 2rem;position:relative;overflow:hidden;transition:all 0.3s;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));}
+.cert-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 16px 32px rgba(255,34,51,0.08);}
+.cert-card::after{content:'';position:absolute;top:0;right:0;width:16px;height:16px;background:var(--red);clip-path:polygon(100% 0,0 0,100% 100%);}
+.cert-logo{font-size:1.5rem;margin-bottom:0.8rem;}
+.cert-issuer{font-family:var(--mono);font-size:0.6rem;color:var(--text-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.4rem;}
+.cert-name{font-family:var(--display);font-size:0.8rem;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.8rem;line-height:1.3;}
+.cert-badge{display:inline-block;font-family:var(--mono);font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;border:1px solid;}
+.cert-badge.in-progress{color:#ffbd2e;border-color:rgba(255,189,46,0.3);background:rgba(255,189,46,0.05);}
+.cert-badge.earned{color:#28c840;border-color:rgba(40,200,64,0.3);background:rgba(40,200,64,0.05);}
+/* Accessibility — respect reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,::before,::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
+  .grid-bg{animation:none;}
+}
 </style>
 </head>
 <body>
@@ -260,6 +284,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
     <li><a href="#projects">Projects</a></li>
     <li><a href="#writeups">Writeups</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-status"><div class="status-dot"></div>Open to Opportunities</div>
@@ -323,7 +348,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 <section id="skills">
   <div class="container">
     <div class="section-header fade-in">
-      <div><div class="section-label">// 01 — Capabilities</div><div class="section-title">Skill Matrix</div></div>
+      <div><div class="section-label">// 01 — Capabilities</div><h2 class="section-title">Skill Matrix</h2></div>
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
@@ -370,7 +395,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
       <div class="platforms-row">
         <a href="https://tryhackme.com/p/K.MohamedYasin" target="_blank" class="platform-badge">
           <!-- TryHackMe icon -->
-          <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+          <svg aria-hidden="true" width="30" height="30" viewBox="0 0 100 100" fill="none">
             <circle cx="50" cy="50" r="50" fill="#1c2526"/>
             <circle cx="50" cy="33" r="10" fill="#88cc14"/>
             <path d="M25 72c0-13.8 11.2-25 25-25s25 11.2 25 25H25z" fill="#88cc14"/>
@@ -379,7 +404,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
         </a>
         <a href="https://profile.hackthebox.com/profile/019cdcfc-9490-73ed-a5f4-69e2591eba48" target="_blank" class="platform-badge">
           <!-- HackTheBox hex icon -->
-          <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+          <svg aria-hidden="true" width="30" height="30" viewBox="0 0 100 100" fill="none">
             <rect width="100" height="100" rx="12" fill="#141d2b"/>
             <polygon points="50,12 84,31 84,69 50,88 16,69 16,31" fill="none" stroke="#9fef00" stroke-width="4"/>
             <polygon points="50,28 68,38 68,62 50,72 32,62 32,38" fill="none" stroke="#9fef00" stroke-width="2" opacity="0.35"/>
@@ -398,7 +423,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 <section id="team">
   <div class="container">
     <div class="section-header fade-in">
-      <div><div class="section-label">// 02 — Collective</div><div class="section-title">B14CK 5QU4D</div></div>
+      <div><div class="section-label">// 02 — Collective</div><h2 class="section-title">B14CK 5QU4D</h2></div>
       <div class="section-line"></div>
     </div>
     <div class="squad-section fade-in">
@@ -418,13 +443,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
         <div class="squad-links">
           <a href="https://discord.gg/WbgtfuK24" target="_blank" class="squad-link primary">
             <!-- Discord SVG -->
-            <svg width="18" height="18" viewBox="0 0 71 55" fill="white">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 71 55" fill="white">
               <path d="M60.1 4.9A58.5 58.5 0 0 0 45.5.4a41.3 41.3 0 0 0-1.8 3.7 54 54 0 0 0-16.4 0A41 41 0 0 0 25.5.4 58.4 58.4 0 0 0 10.9 4.9C1.6 18.9-1 32.5.3 46a58.7 58.7 0 0 0 18 9.1 43.4 43.4 0 0 0 3.8-6.2 38.3 38.3 0 0 1-6-2.9l1.5-1.1a41.9 41.9 0 0 0 35.9 0l1.5 1.1a38.4 38.4 0 0 1-6 2.9 43.7 43.7 0 0 0 3.8 6.2A58.5 58.5 0 0 0 70.7 46C72.2 30.4 67.9 17 60.1 4.9zM23.8 37.6c-3.5 0-6.4-3.3-6.4-7.3s2.8-7.3 6.4-7.3 6.5 3.3 6.4 7.3c0 4-2.8 7.3-6.4 7.3zm23.4 0c-3.5 0-6.4-3.3-6.4-7.3s2.8-7.3 6.4-7.3 6.5 3.3 6.4 7.3c0 4-2.8 7.3-6.4 7.3z"/>
             </svg>
             Join on Discord
           </a>
           <a href="https://github.com/md-yasin786" target="_blank" class="squad-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--text-dim)">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="var(--text-dim)">
               <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.58.11.79-.25.79-.56v-2.02c-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.27 1.19-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.17a10.9 10.9 0 0 1 5.8 0c2.21-1.48 3.18-1.17 3.18-1.17.63 1.57.23 2.73.11 3.02.74.8 1.19 1.82 1.19 3.07 0 4.41-2.7 5.38-5.26 5.66.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56 4.56-1.53 7.85-5.86 7.85-10.97C23.5 5.74 18.27.5 12 .5z"/>
             </svg>
             GitHub
@@ -441,7 +466,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 <section id="ctf">
   <div class="container">
     <div class="section-header fade-in">
-      <div><div class="section-label">// 03 — Competition Record</div><div class="section-title">CTF Achievements</div></div>
+      <div><div class="section-label">// 03 — Competition Record</div><h2 class="section-title">CTF Achievements</h2></div>
       <div class="section-line"></div>
     </div>
     <div class="achievements-grid">
@@ -476,7 +501,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 <section id="projects">
   <div class="container">
     <div class="section-header fade-in">
-      <div><div class="section-label">// 04 — Research &amp; Development</div><div class="section-title">Projects</div></div>
+      <div><div class="section-label">// 04 — Research &amp; Development</div><h2 class="section-title">Projects</h2></div>
       <div class="section-line"></div>
     </div>
     <div class="projects-grid">
@@ -515,7 +540,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 <section id="writeups">
   <div class="container">
     <div class="section-header fade-in">
-      <div><div class="section-label">// 05 — Technical Analysis</div><div class="section-title">Writeups</div></div>
+      <div><div class="section-label">// 05 — Technical Analysis</div><h2 class="section-title">Writeups</h2></div>
       <div class="section-line"></div>
     </div>
     <div class="writeups-list fade-in">
@@ -537,7 +562,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 <section id="education">
   <div class="container">
     <div class="section-header fade-in">
-      <div><div class="section-label">// 06 — Academic Background</div><div class="section-title">Education</div></div>
+      <div><div class="section-label">// 06 — Academic Background</div><h2 class="section-title">Education</h2></div>
       <div class="section-line"></div>
     </div>
     <div class="edu-card fade-in">
@@ -558,39 +583,71 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 
 <div class="divider"></div>
 
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div><div class="section-label">// 07 — Credentials</div><h2 class="section-title">Certifications</h2></div>
+      <div class="section-line"></div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card fade-in">
+        <div class="cert-logo">🛡️</div>
+        <div class="cert-issuer">CompTIA</div>
+        <div class="cert-name">Security+</div>
+        <span class="cert-badge in-progress">In Progress</span>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-logo">🎯</div>
+        <div class="cert-issuer">eLearnSecurity</div>
+        <div class="cert-name">eJPT — Junior Penetration Tester</div>
+        <span class="cert-badge in-progress">Planned</span>
+      </div>
+      <div class="cert-card fade-in" style="opacity:0.45;border-style:dashed;">
+        <div class="cert-logo">➕</div>
+        <div class="cert-issuer">Next Certification</div>
+        <div class="cert-name">To Be Announced</div>
+        <span class="cert-badge in-progress">Upcoming</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="section-header fade-in">
-      <div><div class="section-label">// 07 — Connect</div><div class="section-title">Contact</div></div>
+      <div><div class="section-label">// 08 — Connect</div><h2 class="section-title">Contact</h2></div>
       <div class="section-line"></div>
     </div>
     <div class="contact-grid">
       <div class="fade-in">
         <p class="contact-intro">Open to CTF collaborations, security internships, and conversations with practitioners in the offensive security space.</p>
         <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:1.5rem;margin-bottom:1rem;">
-          <a href="/cdn-cgi/l/email-protection#2845474049454d4c0651495b4146065b4d4b684f45494144064b4745" class="social-btn" style="border-color:rgba(255,34,51,0.35);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-            <div><span class="social-btn-name">Email</span><span class="social-btn-sub"><span class="__cf_email__" data-cfemail="cea3a1a6afa3abaae0b7afbda7a0e0bdabad8ea9a3afa7a2e0ada1a3">[email&#160;protected]</span></span></div>
+          <a href="mailto:mohamed.yasin.sec@gmail.com" class="social-btn" style="border-color:rgba(255,34,51,0.35);">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            <div><span class="social-btn-name">Email</span><span class="social-btn-sub">Gmail</span></div>
           </a>
         </div>
         <div class="social-grid">
 
           <!-- GitHub -->
           <a href="https://github.com/md-yasin786" target="_blank" class="social-btn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#e6edf3"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.58.11.79-.25.79-.56v-2.02c-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.27 1.19-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.17a10.9 10.9 0 0 1 5.8 0c2.21-1.48 3.18-1.17 3.18-1.17.63 1.57.23 2.73.11 3.02.74.8 1.19 1.82 1.19 3.07 0 4.41-2.7 5.38-5.26 5.66.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56 4.56-1.53 7.85-5.86 7.85-10.97C23.5 5.74 18.27.5 12 .5z"/></svg>
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="#e6edf3"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.44 7.86 10.97.58.11.79-.25.79-.56v-2.02c-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.27 1.19-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.17a10.9 10.9 0 0 1 5.8 0c2.21-1.48 3.18-1.17 3.18-1.17.63 1.57.23 2.73.11 3.02.74.8 1.19 1.82 1.19 3.07 0 4.41-2.7 5.38-5.26 5.66.42.36.79 1.08.79 2.18v3.24c0 .31.21.68.8.56 4.56-1.53 7.85-5.86 7.85-10.97C23.5 5.74 18.27.5 12 .5z"/></svg>
             <div><span class="social-btn-name">GitHub</span><span class="social-btn-sub">md-yasin786</span></div>
           </a>
 
           <!-- LinkedIn -->
           <a href="https://www.linkedin.com/in/mohamedyasin-k" target="_blank" class="social-btn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#0a66c2"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76 0-.97.78-1.76 1.75-1.76s1.75.79 1.75 1.76c0 .97-.78 1.76-1.75 1.76zm13.5 11.27h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59v5.66z"/></svg>
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="#0a66c2"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76 0-.97.78-1.76 1.75-1.76s1.75.79 1.75 1.76c0 .97-.78 1.76-1.75 1.76zm13.5 11.27h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 2 3.59 4.59v5.66z"/></svg>
             <div><span class="social-btn-name">LinkedIn</span><span class="social-btn-sub">mohamedyasin-k</span></div>
           </a>
 
           <!-- TryHackMe -->
           <a href="https://tryhackme.com/p/K.MohamedYasin" target="_blank" class="social-btn">
-            <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 100 100" fill="none">
               <circle cx="50" cy="50" r="50" fill="#1c2526"/>
               <circle cx="50" cy="33" r="10" fill="#88cc14"/>
               <path d="M25 72c0-13.8 11.2-25 25-25s25 11.2 25 25H25z" fill="#88cc14"/>
@@ -600,7 +657,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 
           <!-- HackTheBox -->
           <a href="https://profile.hackthebox.com/profile/019cdcfc-9490-73ed-a5f4-69e2591eba48" target="_blank" class="social-btn">
-            <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 100 100" fill="none">
               <rect width="100" height="100" rx="12" fill="#141d2b"/>
               <polygon points="50,12 84,31 84,69 50,88 16,69 16,31" fill="none" stroke="#9fef00" stroke-width="4"/>
               <polygon points="50,28 68,38 68,62 50,72 32,62 32,38" fill="none" stroke="#9fef00" stroke-width="2" opacity="0.3"/>
@@ -611,7 +668,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
 
           <!-- Discord — full width -->
           <a href="https://discord.gg/WbgtfuK24" target="_blank" class="social-btn" style="grid-column:1/-1;">
-            <svg width="22" height="22" viewBox="0 0 71 55" fill="#5865f2"><path d="M60.1 4.9A58.5 58.5 0 0 0 45.5.4a41.3 41.3 0 0 0-1.8 3.7 54 54 0 0 0-16.4 0A41 41 0 0 0 25.5.4 58.4 58.4 0 0 0 10.9 4.9C1.6 18.9-1 32.5.3 46a58.7 58.7 0 0 0 18 9.1 43.4 43.4 0 0 0 3.8-6.2 38.3 38.3 0 0 1-6-2.9l1.5-1.1a41.9 41.9 0 0 0 35.9 0l1.5 1.1a38.4 38.4 0 0 1-6 2.9 43.7 43.7 0 0 0 3.8 6.2A58.5 58.5 0 0 0 70.7 46C72.2 30.4 67.9 17 60.1 4.9zM23.8 37.6c-3.5 0-6.4-3.3-6.4-7.3s2.8-7.3 6.4-7.3 6.5 3.3 6.4 7.3c0 4-2.8 7.3-6.4 7.3zm23.4 0c-3.5 0-6.4-3.3-6.4-7.3s2.8-7.3 6.4-7.3 6.5 3.3 6.4 7.3c0 4-2.8 7.3-6.4 7.3z"/></svg>
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 71 55" fill="#5865f2"><path d="M60.1 4.9A58.5 58.5 0 0 0 45.5.4a41.3 41.3 0 0 0-1.8 3.7 54 54 0 0 0-16.4 0A41 41 0 0 0 25.5.4 58.4 58.4 0 0 0 10.9 4.9C1.6 18.9-1 32.5.3 46a58.7 58.7 0 0 0 18 9.1 43.4 43.4 0 0 0 3.8-6.2 38.3 38.3 0 0 1-6-2.9l1.5-1.1a41.9 41.9 0 0 0 35.9 0l1.5 1.1a38.4 38.4 0 0 1-6 2.9 43.7 43.7 0 0 0 3.8 6.2A58.5 58.5 0 0 0 70.7 46C72.2 30.4 67.9 17 60.1 4.9zM23.8 37.6c-3.5 0-6.4-3.3-6.4-7.3s2.8-7.3 6.4-7.3 6.5 3.3 6.4 7.3c0 4-2.8 7.3-6.4 7.3zm23.4 0c-3.5 0-6.4-3.3-6.4-7.3s2.8-7.3 6.4-7.3 6.5 3.3 6.4 7.3c0 4-2.8 7.3-6.4 7.3z"/></svg>
             <div><span class="social-btn-name">Discord — B14CK 5QU4D Community</span><span class="social-btn-sub">discord.gg/WbgtfuK24</span></div>
           </a>
 
@@ -640,7 +697,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:1.
   <div class="footer-text">Cybersecurity Student &nbsp;·&nbsp; Tamil Nadu, India</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const obs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -650,4 +707,15 @@ const obs = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.08 });
-document.querySelecto
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.terminal-body > span').forEach((l, i) => {
+  l.style.opacity = '0';
+  setTimeout(() => {
+    l.style.opacity = '1';
+    l.style.transition = 'opacity 0.12s';
+  }, i * 140 + 600);
+});
+</script>
+</body>
+</html>
